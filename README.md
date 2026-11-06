@@ -1,38 +1,58 @@
-# KunBlocker Data
+# Blocker Data
 
-Public database distribution for KunBlocker iOS.
+Public database distribution for Blocker iOS.
 
 ## Files
 
+### Spam Identification Database
+
 - `us-spam.json` — US suspected spam caller identification database.
-- `manifest.json` — Version, timestamp, file size, and SHA-256 checksum.
+- `manifest.json` — Database version, update timestamp, entry count, file size, and SHA-256 checksum.
 
-## Data source
+### US Curated Blocklist
 
-The database is generated from public FCC consumer complaints.
+- `us-blocklist.json` — Curated US phone numbers intended for automatic blocking.
+- `blocklist-manifest.json` — Database version, update timestamp, entry count, file size, and SHA-256 checksum.
 
-Only complaints categorized as Phone / Unwanted Calls are considered.
-Numbers require at least two reports within the collection window.
+## Data Sources
 
-## Important limitations
+### FCC Spam Identification Database
 
-- Complaint records are unverified.
-- Caller ID numbers may be spoofed.
-- Presence in this database does not prove that a number is malicious.
-- The database is for caller identification only, not automatic blocking.
+Generated from public FCC consumer complaint records.
 
-KunBlocker maintains personal blocking rules separately.
+- Only complaints categorized as **Phone / Unwanted Calls** are considered.
+- Phone numbers must have at least two reports within the collection window.
+- Database updates are generated and validated through GitHub Actions.
+
+### US Curated Blocklist
+
+Contains 355 US phone numbers collected from user-provided.
+
+These numbers are manually curated and are not independently verified by the FCC.
+
+## How Blocker Uses the Databases
+
+| Database | Action |
+|---|---|
+| `us-spam.json` | Identifies callers as Suspected Spam |
+| `us-blocklist.json` | Blocks listed phone numbers |
+
+The two databases serve different purposes and are maintained separately.
+
+## Important Limitations
+
+- FCC complaint records are unverified.
+- Caller ID numbers can be spoofed.
+- A complaint does not prove that a number is malicious.
+- Presence in the FCC database does not automatically block a caller.
+- Curated blocklist entries are based on user-provided reports and may contain errors.
+
+## Privacy
+
+This repository contains downloadable phone-number databases only. It does not contain the Blocker iOS application source code or personal user information.
 
 ## Updates
 
-Database candidates are generated and validated by the private
-KunBlocker repository's GitHub Actions workflow before publication.
+Database files and their corresponding manifests are versioned separately.
 
-## US Curated Blocklist
-
-- `us-blocklist.json` — Curated US phone numbers intended for blocking.
-- `blocklist-manifest.json` — Version, entry count, file size, and SHA-256 checksum.
-
-These numbers were collected from user-provided screenshots. They are not independently verified by the FCC.
-
-The blocklist is separate from the FCC spam identification database. KunBlocker uses this list for blocking and the FCC list for caller identification.
+Blocker verifies downloaded database files using SHA-256 checksums before accepting updates.
