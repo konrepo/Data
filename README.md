@@ -27,3 +27,12 @@ KunBlocker maintains personal blocking rules separately.
 
 Database candidates are generated and validated by the private
 KunBlocker repository's GitHub Actions workflow before publication.
+
+## US Curated Blocklist
+
+- `us-blocklist.json` — Curated US phone numbers intended for blocking.
+- `blocklist-manifest.json` — Version, entry count, file size, and SHA-256 checksum.
+
+These numbers were collected from user-provided screenshots. They are not independently verified by the FCC.
+
+The blocklist is separate from the FCC spam identification database. KunBlocker uses this list for blocking and the FCC list for caller identification.
