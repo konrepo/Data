@@ -1,0 +1,14 @@
+{
+  "schemaVersion": 1,
+  "databaseVersion": "2026-11-06T04:07:44.570954+00:00",
+  "updatedAt": "2026-11-06T04:07:44.570954+00:00",
+  "country": "US",
+  "file": "us-spam.json",
+  "sha256": "66180901a1d1939027961022c9175d09af86f8f95a04247356134f86091dc235",
+  "sizeBytes": 18176,
+  "entryCount": 945,
+  "action": "identify",
+  "source": [
+    "FCC"
+  ]
+}
