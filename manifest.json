@@ -1,12 +1,12 @@
 {
   "schemaVersion": 1,
-  "databaseVersion": "2026-11-06T04:07:44.570954+00:00",
-  "updatedAt": "2026-11-06T04:07:44.570954+00:00",
+  "databaseVersion": "2026-11-06T14:18:05.812617+00:00",
+  "updatedAt": "2026-11-06T14:18:05.812617+00:00",
   "country": "US",
   "file": "us-spam.json",
-  "sha256": "66180901a1d1939027961022c9175d09af86f8f95a04247356134f86091dc235",
-  "sizeBytes": 18176,
-  "entryCount": 945,
+  "sha256": "086726bcf24d7a55f56171d33a9b291c33608b53fbd212857833a67520a8880c",
+  "sizeBytes": 18936,
+  "entryCount": 985,
   "action": "identify",
   "source": [
     "FCC"
