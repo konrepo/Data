@@ -1,12 +1,12 @@
 {
   "schemaVersion": 1,
-  "databaseVersion": "2026-11-06T13:09:11.329665+00:00",
-  "updatedAt": "2026-11-06T13:09:11.329665+00:00",
+  "databaseVersion": "2026-11-07T04:30:23.071506+00:00",
+  "updatedAt": "2026-11-07T04:30:23.071506+00:00",
   "country": "US",
   "file": "us-blocklist.json",
-  "sha256": "3f17a4d1f31dbb2425603d27215071fba555a19b1399078a6541f3f40afa1300",
-  "sizeBytes": 6960,
-  "entryCount": 355,
+  "sha256": "72ae5fb5bec5267ccb3241022ae757b1f90c36b2603ab932029414f6969951f1",
+  "sizeBytes": 7169,
+  "entryCount": 366,
   "action": "block",
   "source": "curated"
 }
